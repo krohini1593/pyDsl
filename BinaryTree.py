@@ -1,4 +1,4 @@
-class Node:
+class BinarySearchTree:
 
 	def __init__(self,data):
 		self.left=None;
@@ -15,7 +15,7 @@ class Node:
 	def display_preorder(self):
         print self.data
         if self.left:
-        	print self.left.display()
+            print self.left.display()
         if self.right:
             print self.right.display()
 	
@@ -25,7 +25,7 @@ class Node:
         if self.right:
             print self.right.display()
 
-         print self.data
+        print self.data
 
     def lookup(self,data,parent=None):
     	if data < self.data:
@@ -39,6 +39,6 @@ class Node:
     	else:
     		return self, parent
 
-root=Node(8)
+root=BinarySearchTree(8)
 root.display_inorder()
 
