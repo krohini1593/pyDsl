@@ -30,13 +30,13 @@ class BinarySearchTree:
     		 if data < self.data:
     			if self.left is None:
     				return None, None
-    	         return self.left.lookup(data,self)
-    	 elif data > self.data :
-    		if self.right is None:
-    			return None, None
-    		return self.right.lookup(data,self)
-    	 else:
-    		return self, parent
+    	        	return self.left.lookup(data,self)
+	    	 elif data > self.data :
+    			if self.right is None:
+    				return None, None
+    			return self.right.lookup(data,self)
+    	 	 else:
+    			return self, parent
 
 root=BinarySearchTree(8)
 root.display_inorder()
