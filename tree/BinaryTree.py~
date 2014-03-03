@@ -5,7 +5,7 @@ class BinarySearchTree:
 		self.right=None;
 		self.data=data;
 
-	def display_inorder(self):
+		def display_inorder(self):
 		if self.left:
 			print self.left.display_inorder()
 		print self.data

@@ -30,23 +30,23 @@ class RedBlackTree:
 		return newNode
 	def display_inorder(self):
 		if self.left:
-			print self.left.display_inorder()
+			print self.left.display()
 		print self.data
 		if self.right:
-			print self.right.display_inorder()
+			print self.right.display()
 
 	def display_preorder(self):
         	print self.data
         	if self.left:
-                	print self.left.display_preorder()
+                	print self.left.display()
         	if self.right:
-                	print self.right.display_preorder()
+                	print self.right.display()
 	
 	def display_postorder(self):
                 if self.left:
-           		 print self.left.display_postorder()
+           		 print self.left.display()
        		if self.right:
-           		 print self.right.display_postorder()
+           		 print self.right.display()
 	        print self.data	
 rb=RedBlackTree(5)
 rb.insert(6)
