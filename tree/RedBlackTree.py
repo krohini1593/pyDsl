@@ -5,9 +5,10 @@ class RedBlackTree:
 		self.data=data
 		self.color="BLACK"
 		self.root=self
-	def insert(self,data):
-
-		newNode=RedBlackTree(data)
+		
+		
+	def insert_location(self,data): #insert node at its proper place
+	        newNode=RedBlackTree(data)
 		newNode.color="RED"
 	
 		if self.root is None:
@@ -27,7 +28,15 @@ class RedBlackTree:
 					newNode.parent=node
 					break
 				node=node.right
+		return newNode	
+	
+	
+	def insert(self,data): #First insert at location then adjust node to balance
+		newNode=self.insert_location(data)
+		#node Inserted Now Balance
 		return newNode
+	
+		
 	def display_inorder(self):
 		if self.left:
 			print self.left.display_inorder()
@@ -50,9 +59,9 @@ class RedBlackTree:
 	       	print self.data,self.color
 rb=RedBlackTree(5)
 rb.insert(6)
-rb.insert(7)
+rb.insert(4)
+rb.insert(2)
 rb.insert(10)
 rb.display_preorder()
-
 
 
